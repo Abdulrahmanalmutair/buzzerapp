@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzzer App - Host</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Host Login</h1>
+    <div id="loginSection">
+        <input type="password" id="password" placeholder="Enter Host Password" required>
+        <button id="loginBtn">Login</button>
+    </div>
+    <div id="hostSection" style="display: none;">
+        <h2>Contest Management</h2>
+        <div id="contestantCountSection">
+            <input type="number" id="maxContestants" placeholder="Set number of contestants">
+            <button id="setMaxBtn">Set Number of Contestants</button>
+            <p id="contestantCountDisplay" style="display: none;"></p>
+            <button id="resetContestantCount" style="display: none;">Reset Number of Contestants</button>
+        </div>
+        <h3>Contestants Joined:</h3>
+        <ul id="contestantList"></ul>
+        <p id="buzzMessageHost"></p> <!-- Display message here for the host -->
+        <button id="resetBtn">Reset Buzzer</button>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/host.js"></script>
+</body>
+</html>

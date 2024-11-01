@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzzer App - Contestant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Join as Contestant</h1>
+    <div id="joinSection">
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <button id="joinBtn">Join Contest</button>
+    </div>
+    <div id="buzzerSection" style="display: none;">
+        <p id="buzzMessage"></p> <!-- Display message here -->
+        <button id="buzzerBtn">Buzz!</button>
+        <p id="pointsDisplay">Points: 0</p>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contestant.js"></script>
+</body>
+</html>
